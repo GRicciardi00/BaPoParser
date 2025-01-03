@@ -12,7 +12,7 @@ Crea un virtual enviornment<br />
 Attiva l'enviroment<br /> 
 `source ./venv/bin/activate`<br /> 
 Installa le librerie<br /> 
-`pip install -r requirements.txt`<br /> 
+`pip install -r requirements.txt`
 # Guida all'uso
 1) Inserisci il file pdf nella cartella Data
 2) Modifica i percorsi in example.py secondo le tue preferenze
