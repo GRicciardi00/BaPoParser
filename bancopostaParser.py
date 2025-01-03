@@ -12,7 +12,7 @@ class BancopostaParser:
         # Get all tables from all pages
         for i in range(self.num_pages):
             self.pages.append(self.get_page(i))
-        # Remove first row from first page and last two rows from last page (starting and final balance, I don't need them)
+        # Remove first row from first page
         self.pages[0] = self.pages[0].iloc[1:]
         # Drop rows with empty values in the first column
         for i in range(self.num_pages):
@@ -22,7 +22,7 @@ class BancopostaParser:
             self.pages[i].reset_index(drop=True, inplace=True)
         self.df = pd.concat(self.pages)
         #Drop the second and last column and last two rows
-        self.df = self.df.iloc[:, [0,2,3,4]]
+        self.df = self.df.iloc[:-3, [0,2,3,4]]
         # Drop rows where the first column is empty -> ones with only description
         self.df = self.df[self.df.iloc[:, 0] != ""]
         # Convert strings to datetime objects -> used to filter by date
@@ -50,7 +50,7 @@ class BancopostaParser:
         except Exception as e:
             print(f"Error exporting to Excel: {e}")
     
-    def filter_by_date(self, start_date: str, end_date: str, date_column=0, path = "",export = False) -> pd.DataFrame:
+    def filter_by_date(self, start_date: str, end_date: str, date_column=0, path = "./",export = False) -> pd.DataFrame:
         # Ensure start_date and end_date are datetime.date objects
         try:
             start_date = pd.to_datetime(start_date, format='%d/%m/%y').date()
