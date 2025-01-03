@@ -1,5 +1,4 @@
 #Venv
 BancoPostaVenv
-#.DS_Store
-./Data/.DS_Store
-./.DS_Store
+#DS_Store
+.DS_Store
