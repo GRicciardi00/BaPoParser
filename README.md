@@ -18,5 +18,4 @@ Installa le librerie<br />
 2) Modifica i percorsi in example.py secondo le tue preferenze
 3) Esegui example.py<br /> 
 `python example.py`
-https://github.com/GRicciardi00/BancoPostaParser/blob/main/Data/preview.jpg
 ![alt text](https://github.com/GRicciardi00/BancoPostaParser/blob/main/Data/preview.jpg)
