@@ -7,7 +7,7 @@ Parser per convertire i rendiconto PDF generati da Bancoposta in formato CSV o E
 - Pandas 2.2.3
 - MatplotLib 3.9.4
 # Installazione
-Crea un virtual enviornment
+Crea un virtual enviornment<br /> 
 `python -m venv venv`<br /> 
 Attiva l'enviroment<br /> 
 `source ./venv/bin/activate`<br /> 
